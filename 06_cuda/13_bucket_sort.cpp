@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <vector>
+#include <cuda_runtime.h>
 
 __global__ void Bucket_init(int *bucket, int range){
   int idx = threadIdx.x + blockIdx.x * blockDim.x;
